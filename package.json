@@ -1,0 +1,8 @@
+{
+  "name": "altbrew",
+  "version": "0.1.0",
+  "description": "OSS for Breweries!",
+  "main": "index.js",
+  "author": "Nicolas Polhamus",
+  "license": "MIT"
+}
