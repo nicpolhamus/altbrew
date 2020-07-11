@@ -4,5 +4,11 @@
   "description": "OSS for Breweries!",
   "main": "index.js",
   "author": "Nicolas Polhamus",
-  "license": "MIT"
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "server/*",
+    "core/*",
+    "ui/*"
+  ]
 }
