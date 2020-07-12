@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+    api:
+        build: 
+            context: '../server'
+        ports: 
+            - 9000:9000
+        volumes: 
+            - ../server:/usr/altbrew/app
+    database:
+        image: postgres
+        environment: 
+            POSTGRES_PASSWORD: test
+        volumes: 
+            - ./data:/var/lib/postgresql/data
+
+networks: 
+    altbrew:
