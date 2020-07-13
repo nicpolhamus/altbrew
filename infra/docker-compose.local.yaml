@@ -12,6 +12,7 @@ services:
         image: postgres
         environment: 
             POSTGRES_PASSWORD: test
+            POSTGRES_DB: altbrew
         volumes: 
             - ./data:/var/lib/postgresql/data
 
