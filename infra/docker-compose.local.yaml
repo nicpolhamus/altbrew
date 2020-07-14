@@ -5,16 +5,23 @@ services:
         build: 
             context: '../server'
         ports: 
-            - 9000:9000
+            - "9000:9000"
         volumes: 
             - ../server:/usr/altbrew/app
+        depends_on: 
+            - database
+        networks:
+            - altbrew
     database:
         image: postgres
-        environment: 
+        environment:
             POSTGRES_PASSWORD: test
-            POSTGRES_DB: altbrew
         volumes: 
             - ./data:/var/lib/postgresql/data
+        ports: 
+            - "5432:5432"
+        networks:
+            - altbrew
 
 networks: 
     altbrew:

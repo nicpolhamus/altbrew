@@ -1,19 +1,25 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Inject } from '@nestjs/common';
 import { TypeOrmOptionsFactory, TypeOrmModuleOptions } from '@nestjs/typeorm';
+import { Environment } from 'src/common/environment';
 
 @Injectable()
 export class ConfigService implements TypeOrmOptionsFactory {
+  constructor(
+    @Inject('ENVIRONMENT_CONFIG')
+    private readonly envConfig: Environment
+  ) { }
   createTypeOrmOptions(): TypeOrmModuleOptions {
     // TODO: use env file for config values
     return {
       type: 'postgres',
-      host: 'database',
-      port: 5432,
-      username: 'postgres',
-      password: 'test',
-      database: 'altbrew',
+      host: this.envConfig.DBURI,
+      port: this.envConfig.DBPORT,
+      username: this.envConfig.DBUSER,
+      password: this.envConfig.DBPASS,
+      database: this.envConfig.DBNAME,
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: true
+      synchronize: true,
+      autoLoadEntities: true
     };
   }
 }
