@@ -24,6 +24,11 @@ $ docker-compose -f ./infra/docker-compose.local.yaml build
 
 The API docs can be viewed at `http://localhost:9000/api` once the API is up and running.
 
+**Connecting to the Database:**
+
+The Postgres instance is being exposed on `localhost:5432`, so any DB client will be able to connect to it.
+The credentials used for the Database are located in the `server/.env`.
+
 ## Roadmap
 
 - [ ] write tests for auth
