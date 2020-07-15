@@ -15,6 +15,9 @@ $ docker-compose -f ./infra/docker-compose.local.yaml up -d
 
 # to spin down the env
 $ docker-compose -f ./infra/docker-compose.local.yaml down
+
+# building docker-compose images
+$ docker-compose -f ./infra/docker-compose.local.yaml build
 ```
 
 **API Docs:**
