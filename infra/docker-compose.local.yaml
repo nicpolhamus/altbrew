@@ -3,15 +3,15 @@ version: '3.8'
 services:
     api:
         build: 
-            context: '../server'
+            context: ../server
         ports: 
             - "9000:9000"
-        volumes: 
-            - ../server:/usr/altbrew/app
         depends_on: 
             - database
         networks:
             - altbrew
+        volumes: 
+            - ../server/src:/usr/altbrew/app/src
     database:
         image: postgres
         environment:
