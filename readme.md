@@ -17,6 +17,10 @@ $ docker-compose -f ./infra/docker-compose.local.yaml up -d
 $ docker-compose -f ./infra/docker-compose.local.yaml down
 ```
 
+**API Docs:**
+
+The API docs can be viewed at `http://localhost:9000/api` once the API is up and running.
+
 ## Roadmap
 
 - [ ] write tests for auth
