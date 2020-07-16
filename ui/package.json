@@ -1,0 +1,10 @@
+{
+  "name": "ui",
+  "version": "0.1.0",
+  "description": "Altbrew UI",
+  "author": "Nicolas Polhamus",
+  "license": "MIT",
+  "dependencies": {
+    
+  }
+}
