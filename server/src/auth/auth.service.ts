@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { UserService } from 'src/user/user.service';
-import { UserDto } from 'src/user/dto/user.dto';
-import { User } from 'src/user/user.entity';
+import { UserService } from '../user/user.service';
+import { UserDto } from '../user/dto/user.dto';
+import { User } from '../user/user.entity';
 import { compare } from 'bcrypt';
 import { JwtPayload } from './jwt-payload.model';
 import { UserLoginResponseDto } from './dto/user.login.response.dto';
