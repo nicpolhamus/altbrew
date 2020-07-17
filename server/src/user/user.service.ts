@@ -7,9 +7,9 @@ import { User } from './user.entity';
 import { CreateUserDto } from './dto/create.user.dto';
 import { UserDto } from './dto/user.dto';
 import { UpdateUserDto } from './dto/update.user.dto';
-import { UserLoginResponseDto } from 'src/auth/dto/user.login.response.dto';
-import { JwtPayload } from 'src/auth/jwt-payload.model';
-import { Environment } from 'src/common/environment';
+import { UserLoginResponseDto } from '../auth/dto/user.login.response.dto';
+import { JwtPayload } from '../auth/jwt-payload.model';
+import { Environment } from '../common/environment';
 
 @Injectable()
 export class UserService {
@@ -54,7 +54,7 @@ export class UserService {
   async register(createUserDto: CreateUserDto): Promise<UserLoginResponseDto> {
     const user = await this.create(createUserDto);
     const token = await this.signToken(user);
-    return {token};
+    return new UserLoginResponseDto(token);
   }
 
   async findByEmail(email: string): Promise<User> {
