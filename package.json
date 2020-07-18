@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "core/*",
-    "ui/*"
+    "core/",
+    "ui/"
   ]
 }

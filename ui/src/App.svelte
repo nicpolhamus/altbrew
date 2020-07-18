@@ -1,5 +1,6 @@
 <script>
-	export let name;
+  export let name;
+  import { stuff } from '@altbrew/core';
 </script>
 
 <main>
