@@ -1,11 +1,12 @@
 <script>
   export let name;
-  import { stuff } from '@altbrew/core';
+  import Button from '@altbrew/core';
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <Button text='test'></Button>
 </main>
 
 <style>
